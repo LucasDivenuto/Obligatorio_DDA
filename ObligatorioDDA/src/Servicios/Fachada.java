@@ -4,8 +4,10 @@
  */
 package Servicios;
 
+import Logica.Casillero;
 import Logica.Crupier;
 import Logica.Jugador;
+import Logica.Mesa;
 
 /**
  *
@@ -14,13 +16,15 @@ import Logica.Jugador;
 public class Fachada {
     
     private ServicioUsuarios sUsuarios;
-    //private ServicioTipos sTipos;
+    private ServicioCasilleros sCasilleros;
+    private ServicioMesas sMesas;
 
     private static Fachada instancia;
     
     private Fachada() {
         sUsuarios = new ServicioUsuarios();
-        //sTipos = new ServicioTipos();
+        sCasilleros = new ServicioCasilleros();
+        sMesas= new ServicioMesas();
     }
 
     public static Fachada getInstancia() {
@@ -45,6 +49,14 @@ public class Fachada {
 
     public Crupier loginCrupier(String cedula, String password) {
         return sUsuarios.loginCrupier(cedula, password);
+    }
+
+    public void agregar(Casillero casillero) {
+        sCasilleros.agregar(casillero);
+    }
+    
+     public void agregar(Mesa mesa) {
+        sMesas.agregar(mesa);
     }
     
     

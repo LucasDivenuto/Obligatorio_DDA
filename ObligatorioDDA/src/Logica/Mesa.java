@@ -12,11 +12,17 @@ import java.util.List;
  */
 public class Mesa {
     
-    private Crupier crupier;
+    private Crupier crupier; //ES NECESARIO QUE CONOZCA AL CRUPIER?
     private List<Jugador> jugadores;
-    private List<Casillero> casilleros;
-    private List<TipoApuesta> tiposApuestas;
+   // private List<Casillero> casilleros; // o conoce casilleros o conoce tipo de apuesta
+    private List<TipoApuesta> tiposApuestas; //
 
+    public Mesa() {
+       
+    }
+
+    
+    
     public Crupier getCrupier() {
         return crupier;
     }
@@ -33,13 +39,7 @@ public class Mesa {
         this.jugadores = jugadores;
     }
 
-    public List<Casillero> getCasilleros() {
-        return casilleros;
-    }
-
-    public void setCasilleros(List<Casillero> casilleros) {
-        this.casilleros = casilleros;
-    }
+   
 
     public List<TipoApuesta> getTiposApuestas() {
         return tiposApuestas;

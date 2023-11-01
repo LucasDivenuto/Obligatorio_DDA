@@ -22,6 +22,11 @@ public class Crupier extends Usuario {
     public void setMesa(Mesa mesa) {
         this.mesa = mesa;
     }
+    
+    public Mesa abrirMesa(){
+        Mesa mesa=new Mesa();
+        return mesa;
+    }
    
    
 }

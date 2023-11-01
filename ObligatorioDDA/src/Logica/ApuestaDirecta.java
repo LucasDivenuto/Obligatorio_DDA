@@ -10,4 +10,8 @@ package Logica;
  */
 public class ApuestaDirecta extends TipoApuesta{
     
+    public ApuestaDirecta(int factorDePago, String nombre) {
+        super(factorDePago, nombre);
+    }
+    
 }

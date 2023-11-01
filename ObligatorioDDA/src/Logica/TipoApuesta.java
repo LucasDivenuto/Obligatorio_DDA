@@ -10,4 +10,12 @@ package Logica;
  */
 public abstract class TipoApuesta {
     private int factorDePago;
+    private String nombre;
+
+    public TipoApuesta(int factorDePago, String nombre) {
+        this.factorDePago = factorDePago;
+        this.nombre = nombre;
+    }
+    
+    
 }
